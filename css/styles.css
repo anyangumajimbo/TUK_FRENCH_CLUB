@@ -346,6 +346,9 @@ img {
   gap: 3rem;
 }
 
+.about-text h2 {
+  text-align: center;
+}
 .about-text h3 {
   font-family: 'Roboto Condensed', sans-serif;
   color: var(--primary);
@@ -362,6 +365,51 @@ img {
   margin-top: 2rem;
 }
 
+/* ------------About Dropdown--------- */
+/* Dropdown styles */
+.nav-links .dropdown {
+  position: relative;
+}
+
+.nav-links .dropdown-toggle::after {
+  content: " ▼";
+  font-size: 0.7em;
+}
+
+.nav-links .dropdown-menu {
+  display: none;
+  position: absolute;
+  background: var(--primary);
+  min-width: 180px;
+  box-shadow: var(--shadow);
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  border-radius: var(--border-radius);
+}
+
+.nav-links .dropdown-menu li {
+  width: 100%;
+}
+
+.nav-links .dropdown-menu a {
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  display: block;
+  white-space: nowrap;
+}
+
+.nav-links .dropdown:hover .dropdown-menu,
+.nav-links .dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+/* Optional: Style for active dropdown item */
+.nav-links .dropdown-menu a:hover {
+  background: var(--secondary);
+  color: var(--text-light);
+}
+
 /* ---------- Activities Preview ---------- */
 .activities-preview {
   padding: 5rem 0;
@@ -371,7 +419,7 @@ img {
 .activity-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 5rem;
 }
 
 .activity-card {

@@ -34,7 +34,14 @@
         
         <ul class="nav-links" id="navLinks">
           <li><a href="../index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
+          <li class="dropdown">
+  <a href="about.html" class="active dropdown-toggle">About</a>
+  <ul class="dropdown-menu">
+    <li><a href="about.html#about-us">About Us</a></li>
+    <li><a href="about.html#leadership">Leadership</a></li>
+    <li><a href="about.html#our-history">Our History</a></li>
+  </ul>
+</li>
           <li><a href="activities.html">Activities</a></li>
           <li><a href="membership.html">Membership</a></li>
           <li><a href="gallery.html">Gallery</a></li>
@@ -55,8 +62,8 @@
       </div>
     </section>
 
-    <!-- Who We Are Section -->
-    <section class="py-16">
+    <!-- Who We Are Section/ About Us -->
+   <section id="about-us" class="py-16">
       <div class="container">
         <div class="about-content">
           <div class="about-text">
@@ -163,7 +170,7 @@
     </section>
     
     <!-- Leadership Team Section -->
-    <section class="py-16">
+   <section id="leadership" class="py-16">
       <div class="container">
         <h2 class="text-center">Our Leadership Team</h2>
         <div class="divider"></div>
@@ -178,12 +185,12 @@
               </div>
             </div>
             <div class="team-info">
-              <h3>Marie Dubois</h3>
+              <h3>Gilbert</h3>
               <span class="team-role">President</span>
               <p style="color: var(--text-muted);">
-                Marie leads the club with passion and vision, ensuring we meet our goals and serve our members effectively.
+                Gilbert leads the club with passion and vision, ensuring we meet our goals and serve our members effectively.
               </p>
-              <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 1rem;">4th Year, International Relations</p>
+              <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 1rem;">2nd Year, Biochemistry</p>
             </div>
           </div>
           
@@ -196,12 +203,12 @@
               </div>
             </div>
             <div class="team-info">
-              <h3>Jean-Paul Kamau</h3>
+              <h3>Obren Oywaya</h3>
               <span class="team-role">Vice President</span>
               <p style="color: var(--text-muted);">
-                Jean-Paul coordinates our events and supports the president in club administration and strategic planning.
+               Obren Oywaya coordinates our events and supports the president in club administration and strategic planning.
               </p>
-              <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 1rem;">3rd Year, Business Administration</p>
+              <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 1rem;">2nd Year, Commerce</p>
             </div>
           </div>
           
@@ -214,12 +221,12 @@
               </div>
             </div>
             <div class="team-info">
-              <h3>Sophie Wanjiku</h3>
+              <h3>Sophie Tracey</h3>
               <span class="team-role">Secretary</span>
               <p style="color: var(--text-muted);">
                 Sophie handles communications, membership records, and ensures smooth operation of club activities.
               </p>
-              <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 1rem;">3rd Year, Media Studies</p>
+              <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 1rem;">3rd Year, Hospitality</p>
             </div>
           </div>
           
@@ -232,20 +239,39 @@
               </div>
             </div>
             <div class="team-info">
-              <h3>Pierre Ochieng</h3>
+              <h3>Eudia Atieno</h3>
               <span class="team-role">Treasurer</span>
               <p style="color: var(--text-muted);">
-                Pierre manages our finances, budget planning, and ensures fiscal responsibility for all club activities.
+               Eudia manages our finances, budget planning, and ensures fiscal responsibility for all club activities.
               </p>
               <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 1rem;">4th Year, Finance</p>
             </div>
           </div>
+          <div class="team-grid">
+          <div class="team-card">
+            <div class="team-header">
+              <div class="team-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3>Phina  Carren</h3>
+              <span class="team-role">Debate/Socials Co-ordinator</span>
+              <p style="color: var(--text-muted);">
+                Phina leads the debate team with passion and vision, ensuring we meet our goals and serve our members effectively.
+              </p>
+              <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 1rem;">3rd Year, International Relations</p>
+            </div>
+          </div>
+        
         </div>
       </div>
     </section>
     
     <!-- History Section -->
-    <section class="py-16 bg-light">
+    <section id="our-history" class="py-16 bg-light">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
           <h2 class="text-center">Our History</h2>
