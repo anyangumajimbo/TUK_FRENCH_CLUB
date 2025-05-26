@@ -410,6 +410,127 @@ img {
   color: var(--text-light);
 }
 
+/* Alumni Section */
+/* Add this CSS to your styles.css file */
+/* Alumni Section */
+.alumni-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--primary);
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.alumni-card {
+  background-color: var(--text-light);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.alumni-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.alumni-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.alumni-avatar svg {
+  width: 40px;
+  height: 40px;
+}
+
+.alumni-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.alumni-role {
+  display: block;
+  color: var(--secondary);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.alumni-location {
+  color: var(--primary);
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.alumni-location::before {
+  content: "📍";
+  margin-right: 0.25rem;
+}
+
+.alumni-bio {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.alumni-year {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+/* Initially hide some alumni cards for the "Load More" functionality */
+.alumni-card:nth-child(n+7) {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .alumni-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
 /* ---------- Activities Preview ---------- */
 .activities-preview {
   padding: 5rem 0;
@@ -451,6 +572,26 @@ img {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
 }
+
+
+  .btn-light {
+    background-color: var(--secondary);
+    color: var(--text-light);
+    border: 2px solid var(--primary);
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+  }
+
+  .btn-light:hover {
+    background-color: #ffffff;
+    color: var(--text-light);
+  }
+
+
 
 /* ---------- Gallery Preview ---------- */
 .gallery-preview {

@@ -160,3 +160,53 @@ document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
     }
   });
 });
+
+
+// Alumni Section
+// Add this JavaScript to your main.js file
+document.addEventListener('DOMContentLoaded', function() {
+  // Alumni Filter Functionality
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const alumniCards = document.querySelectorAll('.alumni-card');
+  
+  if (filterButtons.length > 0) {
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        const filterValue = button.getAttribute('data-filter');
+        
+        // Filter alumni cards
+        alumniCards.forEach(card => {
+          if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+  
+  // Load More Alumni Functionality
+  const loadMoreBtn = document.getElementById('loadMoreAlumni');
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      const hiddenAlumni = document.querySelectorAll('.alumni-card:nth-child(n+7):not([style="display: none;"]');
+      
+      hiddenAlumni.forEach((alumni, index) => {
+        if (index < 3) { // Show 3 more at a time
+          alumni.style.display = 'flex';
+        }
+      });
+      
+      // Hide button if no more alumni to show
+      if (document.querySelectorAll('.alumni-card[style="display: none;"]').length === 0) {
+        loadMoreBtn.style.display = 'none';
+      }
+    });
+  }
+});
