@@ -124,31 +124,6 @@ function setupGalleryLightbox() {
   });
 }
 
-
-
-// Handle FAQ accordion (if it exists)
-document.addEventListener('DOMContentLoaded', function() {
-  const faqQuestions = document.querySelectorAll('.faq-question');
-  
-  faqQuestions.forEach(question => {
-    question.addEventListener('click', () => {
-      const answer = question.nextElementSibling;
-      const isHidden = answer.style.display === 'none' || !answer.style.display;
-      
-      // Hide all answers
-      document.querySelectorAll('.faq-answer').forEach(ans => {
-        ans.style.display = 'none';
-      });
-      
-      // Show this answer if it was hidden
-      if (isHidden) {
-        answer.style.display = 'block';
-      }
-    });
-  });
-});
-
-
 // About Section
 // Dropdown toggle for mobile
 document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
@@ -210,3 +185,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// Upcoming events section
+// Toggle event details visibility
+        function toggleEventDetails(link) {
+            const eventCard = link.closest('.event-card');
+            const preview = eventCard.querySelector('.event-preview');
+            const fullText = eventCard.querySelector('.event-full');
+            
+            if (fullText.style.display === 'none') {
+                preview.style.display = 'none';
+                fullText.style.display = 'block';
+                link.textContent = 'Hide Details';
+            } else {
+                preview.style.display = 'block';
+                fullText.style.display = 'none';
+                link.textContent = 'View Details';
+            }
+        }
+
+
+        // Membership Section
+        // Faq section
+        const faqItems = document.getElementsByClassName('faq-item');
+        for (let i = 0; i < faqItems.length; i++) {
+            faqItems[i].addEventListener('click', function() {
+                this.classList.toggle('active');
+                
+            });
+          
+        }
